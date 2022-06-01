@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useState } from 'react';
 import tw from 'tailwind-styled-components';
 
@@ -38,15 +39,24 @@ const SubMenuItem = tw.div`
 
 interface IProps {
   title: string;
-  subtitles?: string[];
+  path: string;
+  subtitles: {
+    title: string;
+    path: string;
+  }[];
 }
+[];
 
-const MenuItemComponent = ({ title, subtitles }: IProps) => {
+const MenuItemComponent = ({ title, subtitles, path }: IProps) => {
   const [isShowSubtitles, setIsShowSubtitles] = useState(false);
   return (
     <MenuItemWrapper>
       <MenuItem>
-        <MenuTitle>{title}</MenuTitle>
+        <Link href='/entrance'>
+          <a>
+            <MenuTitle>{title}</MenuTitle>
+          </a>
+        </Link>
         <MenuDropBtn onClick={() => setIsShowSubtitles((prev) => !prev)}>
           {isShowSubtitles ? (
             <svg
@@ -76,7 +86,11 @@ const MenuItemComponent = ({ title, subtitles }: IProps) => {
       {isShowSubtitles && (
         <SubMenuContainer>
           {subtitles?.map((subtitle, index) => (
-            <SubMenuItem key={index}>{subtitle}</SubMenuItem>
+            <Link key={index} href='/project/seodong'>
+              <a>
+                <SubMenuItem>{subtitle.title}</SubMenuItem>
+              </a>
+            </Link>
           ))}
         </SubMenuContainer>
       )}

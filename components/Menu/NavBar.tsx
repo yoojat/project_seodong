@@ -3,6 +3,7 @@ import tw from 'tailwind-styled-components';
 import MenuItemComponent from '@components/Menu/MenuItemComponent';
 import { menus } from '@libs/options';
 import Link from 'next/link';
+import Router from 'next/router';
 
 const TopBarWrapper = tw.div`
   fixed
@@ -14,19 +15,31 @@ const TopBarWrapper = tw.div`
 const TopBarContainer = tw.div`
   flex
   justify-center
+  items-center
+  lg:justify-between
   py-2.5
+  lg:py-0
+  max-w-5xl
+  mx-auto
+  
 `;
 const TopBarItem = tw.div`
   font-extralight
   text-lg
+  md:text-sm
+  lg:text-lg
+  lg:font-light
+  lg:px-3
   cursor-pointer
 `;
 
 const MenuIcon = tw.div`
   absolute
   top-3
+  md:top-2
   left-4
   cursor-pointer
+  lg:hidden
 `;
 
 const ContentConver = tw.div<{ isOpen: boolean }>`
@@ -55,7 +68,6 @@ const MenuItemContainer = tw.div`
   items-center
 `;
 
-const MenuSubItem = tw.div``;
 const CloseButton = tw.div`
   absolute
   -right-14
@@ -65,33 +77,63 @@ const CloseButton = tw.div`
   text-white
 `;
 
+const TopBarMenu = tw.div`
+hidden
+lg:block
+
+`;
+const TopBarMenuItemContainer = tw.div`
+  flex
+`;
+const TopBarMenuItem = tw.div`
+  px-3
+  text-sm
+  font-thin
+  cursor-pointer
+  py-5
+`;
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  //  메뉴 클릭하여 라우터 이동시 사이드 메뉴 닫아줌
+  Router.events.on('routeChangeStart', () => {
+    setIsOpen(false);
+  });
+
   return (
     <>
       <TopBarWrapper>
         <TopBarContainer>
+          <MenuIcon onClick={() => setIsOpen(true)}>
+            <svg
+              width='24'
+              height='24'
+              xmlns='http://www.w3.org/2000/svg'
+              fillRule='evenodd'
+              clipRule='evenodd'
+            >
+              <path
+                d='M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z'
+                fill='#1040e2'
+              />
+              <path d='M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z' />
+            </svg>
+          </MenuIcon>
           <Link href='/'>
             <a>
               <TopBarItem>The Project SEODONG</TopBarItem>
             </a>
           </Link>
+          <TopBarMenu>
+            <TopBarMenuItemContainer>
+              {menus.map((menu, index) => (
+                <TopBarMenuItem key={index}>{menu.title}</TopBarMenuItem>
+              ))}
+            </TopBarMenuItemContainer>
+          </TopBarMenu>
+          <div />
         </TopBarContainer>
-        <MenuIcon onClick={() => setIsOpen(true)}>
-          <svg
-            width='24'
-            height='24'
-            xmlns='http://www.w3.org/2000/svg'
-            fillRule='evenodd'
-            clipRule='evenodd'
-          >
-            <path
-              d='M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z'
-              fill='#1040e2'
-            />
-            <path d='M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z' />
-          </svg>
-        </MenuIcon>
       </TopBarWrapper>
       <ContentConver isOpen={isOpen} onClick={() => setIsOpen(false)} />
 
@@ -115,6 +157,7 @@ export default function NavBar() {
               key={index}
               title={menu.title}
               subtitles={menu.subtitles}
+              path={menu.path}
             />
           ))}
         </MenuItemContainer>

@@ -3,17 +3,30 @@ export const title = 'The Project SEODONG';
 export const menus: {
   title: string;
   path: string;
-  subtitles: string[];
+  subtitles: {
+    title: string;
+    path: string;
+  }[];
 }[] = [
   {
     title: '01. Project',
     path: '/service',
-    subtitles: ['서동', '서동 프로젝트', '도시공감'],
+    subtitles: [
+      {
+        title: '서동',
+        path: '/project/seodong',
+      },
+    ],
   },
   {
     title: '01. Project',
     path: '/service',
-    subtitles: ['서동', '서동 프로젝트', '도시공감'],
+    subtitles: [
+      {
+        title: '서동',
+        path: '/project/seodong',
+      },
+    ],
   },
 ];
 export const mainBgImgs = ['/bg/bg1.png', '/bg/bg2.png'];

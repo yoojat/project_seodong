@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import NavBar from './Menu/NavBar';
 import tw from 'tailwind-styled-components';
 import { bgColor, menus } from '@libs/options';
 import { mediaSize } from '@libs/media';
 import { Router, useRouter } from 'next/router';
-import Image from 'next/image';
+import NavBar from '@components/Menu/NavBar';
 
 const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
 ${(_) => bgColor}
 absolute
 w-full
--z-50
-`;
+-z-50`;
+
+const Spacer = tw.div``;
 
 const Footer = tw.footer`
-  text-[#EFDCCA]
-  w-full
-  py-5
-  bg-[#fda4af]
-  text-center
-  font-semibold
+mt-52
+text-center
+text-xs
+font-thin
 `;
 
 interface IProps {
@@ -51,16 +49,21 @@ export default function Layout({ children }: IProps) {
   return (
     <>
       {asPath != '/' && (
-        <NavBar
-        // isSideMenuShow={isSideMenuShow}
-        // setIsSideMenuShow={setIsSideMenuShow}
-        // menuItems={[...menus]}
-        />
+        <>
+          <NavBar
+          // isSideMenuShow={isSideMenuShow}
+          // setIsSideMenuShow={setIsSideMenuShow}
+          // menuItems={[...menus]}
+          />
+          <Spacer className='h-20' />
+        </>
       )}
 
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>123</Footer>
+        <Footer>
+          Coypyright © 2022 The Project SEODONG All rights reserved.
+        </Footer>
       </ContentLayout>
     </>
   );
