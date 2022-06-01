@@ -6,18 +6,16 @@ import { Router, useRouter } from 'next/router';
 import NavBar from '@components/Menu/NavBar';
 
 const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
-${(_) => bgColor}
-absolute
-w-full
--z-50`;
-
+  absolute
+  w-full
+  -z-50`;
 const Spacer = tw.div``;
 
 const Footer = tw.footer`
-mt-52
-text-center
-text-xs
-font-thin
+  mt-52
+  text-center
+  text-xs
+  font-thin
 `;
 
 interface IProps {
