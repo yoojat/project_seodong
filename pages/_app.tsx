@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { NextSeo } from 'next-seo';
+import Layout from '@components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,7 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           site_name: 'The Project Seodong',
         }}
       />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
