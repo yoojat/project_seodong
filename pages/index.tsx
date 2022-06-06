@@ -3,7 +3,13 @@ import tw from 'tailwind-styled-components';
 import SimpleImageSlider from 'react-simple-image-slider';
 import Link from 'next/link';
 
-const images = [{ url: 'img/main/1.jpg' }, { url: 'img/main/4.jpg' }];
+const images = [
+  { url: 'img/main/1.png' },
+  { url: 'img/main/2.png' },
+  { url: 'img/main/3.png' },
+  { url: 'img/main/4.png' },
+  { url: 'img/main/5.png' },
+];
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +29,7 @@ const Home: NextPage = () => {
           The Project Seodong
         </h1>
         <h2 className='hidden lg:block mt-4'>서동 프로젝트</h2>
-        <Link href='/entrance'>
+        <Link href='/about'>
           <a>
             <button className='font-light text-sm border-[0.5px] border-slate-50/30 px-6 py-2 hover:bg-slate-200 hover:text-black transition-colors duration-300 mt-7 mb-24'>
               들어가기

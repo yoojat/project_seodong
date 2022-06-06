@@ -51,6 +51,7 @@ const ContentConver = tw.div<{ isOpen: boolean }>`
   fixed
   transition-all
   duration-500
+  ease-in-out
 `;
 
 const Menu = tw.div<{ isOpen: boolean }>`
@@ -64,7 +65,7 @@ bg-white
   duration-500
 `;
 
-const MenuItemContainer = tw.div`
+const MenuItemContainer = tw.ul`
   items-center
 `;
 
@@ -93,12 +94,28 @@ const TopBarMenuItem = tw.div`
   py-5
 `;
 
+const DownMenu = tw.div<{ downMenuOpen: boolean }>`
+  w-full
+  bg-stone-600
+  border-none
+  absolute
+  overflow-hidden
+  transition-all
+  duration-300
+  ease-in-out
+
+${(p: { downMenuOpen: boolean }) => (p.downMenuOpen ? `max-h-96` : 'max-h-0')}
+`;
+
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [downMenuOpen, setDownMenuOpen] = useState(false);
 
   //  메뉴 클릭하여 라우터 이동시 사이드 메뉴 닫아줌
   Router.events.on('routeChangeStart', () => {
     setIsOpen(false);
+    console.log(Router.pathname);
+    setDownMenuOpen(false);
   });
 
   return (
@@ -125,7 +142,7 @@ export default function NavBar() {
               <TopBarItem>The Project SEODONG</TopBarItem>
             </a>
           </Link>
-          <TopBarMenu>
+          <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>
             <TopBarMenuItemContainer>
               {menus.map((menu, index) => (
                 <TopBarMenuItem key={index}>{menu.title}</TopBarMenuItem>
@@ -134,6 +151,35 @@ export default function NavBar() {
           </TopBarMenu>
           <div />
         </TopBarContainer>
+        <DownMenu
+          onMouseLeave={() => setDownMenuOpen(false)}
+          downMenuOpen={downMenuOpen}
+        >
+          <div className='flex justify-center'>
+            <ul className='flex  py-6'>
+              {menus.map((menu, index) => (
+                <li key={index} className='max-w-4xl mx-10 text-white'>
+                  <Link href={menu.path}>
+                    <a>
+                      <h3 className='mb-2 font-extralight'>{menu.title}</h3>
+                    </a>
+                  </Link>
+                  <ul className='font-thin text-sm text-stone-300 space-y-2'>
+                    {menu.subtitles.map((subtitle, index) => (
+                      <Link key={index} href={subtitle.path}>
+                        <a>
+                          <li className='hover:text-stone-100 transition-colors duration-300'>
+                            {subtitle.title}
+                          </li>
+                        </a>
+                      </Link>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </DownMenu>
       </TopBarWrapper>
       <ContentConver isOpen={isOpen} onClick={() => setIsOpen(false)} />
 

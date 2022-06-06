@@ -2,17 +2,15 @@ import Link from 'next/link';
 import { useState } from 'react';
 import tw from 'tailwind-styled-components';
 
-const MenuItemWrapper = tw.div`
+const MenuItemWrapper = tw.li`
   select-none
-  border-b
-
+  border-b-[0.5px]
 `;
 const MenuItem = tw.div`
   flex
   justify-between
-  py-3
-  px-5
   cursor-pointer
+  flex-col
 `;
 const MenuTitle = tw.div`
   text-sm
@@ -24,13 +22,17 @@ const MenuDropBtn = tw.div`
   justify-center
   cursor-pointer
 `;
-const SubMenuContainer = tw.div`
-  mb-3
+const SubMenuContainer = tw.ul<{ isOpen: boolean }>`
+  mt-1
+  transition-all
+  duration-500
+  overflow-hidden
+  ${(p: { isOpen: boolean }) => (p.isOpen ? `max-h-96` : 'max-h-0')}
+
 `;
 
 const SubMenuItem = tw.div`
   px-8
-  py-1
   first:py-0
   font-thin
   text-sm
@@ -52,48 +54,53 @@ const MenuItemComponent = ({ title, subtitles, path }: IProps) => {
   return (
     <MenuItemWrapper>
       <MenuItem>
-        <Link href='/entrance'>
-          <a>
-            <MenuTitle>{title}</MenuTitle>
-          </a>
-        </Link>
-        <MenuDropBtn onClick={() => setIsShowSubtitles((prev) => !prev)}>
-          {isShowSubtitles ? (
-            <svg
-              viewBox='0 0 45 15'
-              width='25'
-              height='25'
-              xmlns='http://www.w3.org/2000/svg'
-              fillRule='evenodd'
-              clipRule='evenodd'
-            >
-              <path d='M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z' />
-            </svg>
-          ) : (
-            <svg
-              viewBox='0 0 45 15'
-              width='25'
-              height='25'
-              xmlns='http://www.w3.org/2000/svg'
-              fillRule='evenodd'
-              clipRule='evenodd'
-            >
-              <path d='M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z' />
-            </svg>
-          )}
-        </MenuDropBtn>
-      </MenuItem>
-      {isShowSubtitles && (
-        <SubMenuContainer>
+        <div
+          className={`flex justify-between items-center py-2 px-4 transition-all ${
+            isShowSubtitles ? 'bg-slate-100' : ''
+          }`}
+        >
+          <Link href={path}>
+            <a>
+              <MenuTitle>{title}</MenuTitle>
+            </a>
+          </Link>
+          <MenuDropBtn onClick={() => setIsShowSubtitles((prev) => !prev)}>
+            {isShowSubtitles ? (
+              <svg
+                viewBox='0 0 45 15'
+                width='25'
+                height='25'
+                xmlns='http://www.w3.org/2000/svg'
+                fillRule='evenodd'
+                clipRule='evenodd'
+              >
+                <path d='M23.245 20l-11.245-14.374-11.219 14.374-.781-.619 12-15.381 12 15.391-.755.609z' />
+              </svg>
+            ) : (
+              <svg
+                viewBox='0 0 45 15'
+                width='25'
+                height='25'
+                xmlns='http://www.w3.org/2000/svg'
+                fillRule='evenodd'
+                clipRule='evenodd'
+              >
+                <path d='M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z' />
+              </svg>
+            )}
+          </MenuDropBtn>
+        </div>
+
+        <SubMenuContainer isOpen={isShowSubtitles}>
           {subtitles?.map((subtitle, index) => (
-            <Link key={index} href='/project/seodong'>
-              <a>
+            <Link key={index} href={subtitle.path}>
+              <li className={'py-1'}>
                 <SubMenuItem>{subtitle.title}</SubMenuItem>
-              </a>
+              </li>
             </Link>
           ))}
         </SubMenuContainer>
-      )}
+      </MenuItem>
     </MenuItemWrapper>
   );
 };

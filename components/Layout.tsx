@@ -12,7 +12,7 @@ const ContentLayout = tw.div<{ $isSideMenuShow: boolean }>`
 const Spacer = tw.div``;
 
 const Footer = tw.footer`
-  mt-52
+  my-32
   text-center
   text-xs
   font-thin
@@ -53,15 +53,16 @@ export default function Layout({ children }: IProps) {
           // setIsSideMenuShow={setIsSideMenuShow}
           // menuItems={[...menus]}
           />
-          <Spacer className='h-20' />
         </>
       )}
 
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>
-        <Footer>
-          Coypyright © 2022 The Project SEODONG All rights reserved.
-        </Footer>
+        {asPath != '/' && (
+          <Footer>
+            Coypyright © 2022 The Project SEODONG All rights reserved.
+          </Footer>
+        )}
       </ContentLayout>
     </>
   );
