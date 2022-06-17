@@ -5,6 +5,7 @@ import tw from 'tailwind-styled-components';
 const MenuItemWrapper = tw.li`
   select-none
   border-b-[0.5px]
+  hover:text-yellow-900
 `;
 const MenuItem = tw.div`
   flex
@@ -14,7 +15,8 @@ const MenuItem = tw.div`
 `;
 const MenuTitle = tw.div`
   text-sm
-  font-extralight
+  font-medium
+  flex
 `;
 const MenuDropBtn = tw.div`
   inline-flex
@@ -34,14 +36,17 @@ const SubMenuContainer = tw.ul<{ isOpen: boolean }>`
 const SubMenuItem = tw.div`
   px-8
   first:py-0
-  font-thin
+  font-light
   text-sm
   cursor-pointer
+  hover:text-yellow-900
+
 `;
 
 interface IProps {
   title: string;
   path: string;
+  number: string;
   subtitles: {
     title: string;
     path: string;
@@ -49,7 +54,7 @@ interface IProps {
 }
 [];
 
-const MenuItemComponent = ({ title, subtitles, path }: IProps) => {
+const MenuItemComponent = ({ title, subtitles, path, number }: IProps) => {
   const [isShowSubtitles, setIsShowSubtitles] = useState(false);
   return (
     <MenuItemWrapper>
@@ -61,7 +66,12 @@ const MenuItemComponent = ({ title, subtitles, path }: IProps) => {
         >
           <Link href={path}>
             <a>
-              <MenuTitle>{title}</MenuTitle>
+              <MenuTitle>
+                <span className='underline underline-offset-2 scale-75 inline-block text-sm align-text-top mr-4'>
+                  {number}
+                </span>
+                <span className='text-md'>{title}</span>
+              </MenuTitle>
             </a>
           </Link>
           <MenuDropBtn onClick={() => setIsShowSubtitles((prev) => !prev)}>

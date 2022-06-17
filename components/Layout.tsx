@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import tw from 'tailwind-styled-components';
-import { bgColor, menus } from '@libs/options';
 import { mediaSize } from '@libs/media';
 import { Router, useRouter } from 'next/router';
 import NavBar from '@components/Menu/NavBar';
@@ -46,15 +45,13 @@ export default function Layout({ children }: IProps) {
 
   return (
     <>
-      {asPath != '/' && (
-        <>
-          <NavBar
-          // isSideMenuShow={isSideMenuShow}
-          // setIsSideMenuShow={setIsSideMenuShow}
-          // menuItems={[...menus]}
-          />
-        </>
-      )}
+      <>
+        <NavBar
+        // isSideMenuShow={isSideMenuShow}
+        // setIsSideMenuShow={setIsSideMenuShow}
+        // menuItems={[...menus]}
+        />
+      </>
 
       <ContentLayout $isSideMenuShow={isSideMenuShow}>
         <>{children}</>

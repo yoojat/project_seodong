@@ -8,36 +8,35 @@ import Router from 'next/router';
 const TopBarWrapper = tw.div`
   fixed
   w-full
-  border-b
-  bg-white
+  bg-[#f7f6f2]
+  pt-3
+  pb-3
+  px-3
+  lg:px-16
 `;
 
 const TopBarContainer = tw.div`
   flex
-  justify-center
   items-center
+  justify-between
   lg:justify-between
   py-2.5
+  2xl:py-6
   lg:py-0
-  max-w-5xl
   mx-auto
+  text-slate-600
   
 `;
 const TopBarItem = tw.div`
-  font-extralight
+  font-bold
   text-lg
   md:text-sm
   lg:text-lg
-  lg:font-light
-  lg:px-3
+  lg:font-normal
   cursor-pointer
 `;
 
 const MenuIcon = tw.div`
-  absolute
-  top-3
-  md:top-2
-  left-4
   cursor-pointer
   lg:hidden
 `;
@@ -55,7 +54,7 @@ const ContentConver = tw.div<{ isOpen: boolean }>`
 `;
 
 const Menu = tw.div<{ isOpen: boolean }>`
-${(p: { isOpen: any }) => (p.isOpen ? '-left-0' : '-left-full')}
+${(p: { isOpen: any }) => (p.isOpen ? '-right-0' : '-right-full')}
 bg-white
   h-screen
   w-72
@@ -63,6 +62,7 @@ bg-white
   py-2
   transition-all
   duration-500
+  opacity-80
 `;
 
 const MenuItemContainer = tw.ul`
@@ -71,7 +71,7 @@ const MenuItemContainer = tw.ul`
 
 const CloseButton = tw.div`
   absolute
-  -right-14
+  -left-14
   top-3
   w-10
   cursor-pointer
@@ -89,9 +89,12 @@ const TopBarMenuItemContainer = tw.div`
 const TopBarMenuItem = tw.div`
   px-3
   text-sm
-  font-thin
   cursor-pointer
   py-5
+  font-normal
+  hover:text-amber-900
+  relative
+  group
 `;
 
 const DownMenu = tw.div<{ downMenuOpen: boolean }>`
@@ -122,6 +125,35 @@ export default function NavBar() {
     <>
       <TopBarWrapper>
         <TopBarContainer>
+          <Link href='/'>
+            <a>
+              <TopBarItem>The New SEODONG</TopBarItem>
+            </a>
+          </Link>
+          <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>
+            <TopBarMenuItemContainer>
+              {menus.map((menu, index) => (
+                <div key={index}>
+                  <TopBarMenuItem>
+                    <span>{menu.title}</span>
+                    <div className='absolute top-12 group-hover:bg-yellow-900 text-white w-32 pl-3 py-2 invisible group-hover:visible transition-colors ease-in-out duration-300'>
+                      <ul className='list-none'>
+                        {menu.subtitles.map((subtitle, index) => (
+                          <Link key={index} href={subtitle.path}>
+                            <a>
+                              <li className='hover:text-stone-100 transition-colors duration-300 py-2'>
+                                {subtitle.title}
+                              </li>
+                            </a>
+                          </Link>
+                        ))}
+                      </ul>
+                    </div>
+                  </TopBarMenuItem>
+                </div>
+              ))}
+            </TopBarMenuItemContainer>
+          </TopBarMenu>
           <MenuIcon onClick={() => setIsOpen(true)}>
             <svg
               width='24'
@@ -137,21 +169,8 @@ export default function NavBar() {
               <path d='M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z' />
             </svg>
           </MenuIcon>
-          <Link href='/'>
-            <a>
-              <TopBarItem>The Project SEODONG</TopBarItem>
-            </a>
-          </Link>
-          <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>
-            <TopBarMenuItemContainer>
-              {menus.map((menu, index) => (
-                <TopBarMenuItem key={index}>{menu.title}</TopBarMenuItem>
-              ))}
-            </TopBarMenuItemContainer>
-          </TopBarMenu>
-          <div />
         </TopBarContainer>
-        <DownMenu
+        {/* <DownMenu
           onMouseLeave={() => setDownMenuOpen(false)}
           downMenuOpen={downMenuOpen}
         >
@@ -179,7 +198,7 @@ export default function NavBar() {
               ))}
             </ul>
           </div>
-        </DownMenu>
+        </DownMenu> */}
       </TopBarWrapper>
       <ContentConver isOpen={isOpen} onClick={() => setIsOpen(false)} />
 
@@ -204,6 +223,7 @@ export default function NavBar() {
               title={menu.title}
               subtitles={menu.subtitles}
               path={menu.path}
+              number={menu.number}
             />
           ))}
         </MenuItemContainer>

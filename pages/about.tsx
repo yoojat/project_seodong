@@ -4,12 +4,15 @@ import type { NextPage } from 'next';
 import tw from 'tailwind-styled-components';
 
 const CotentBackContainer = tw.div`
-  mx-5
+  text-slate-700
+  font-medium
+  text-md
 `;
 
 const Home: NextPage = () => {
   return (
     <>
+      <div></div>
       <TopImage
         src={'/about/1.jpg'}
         alt={'서동 이미지'}

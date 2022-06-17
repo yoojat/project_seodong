@@ -6,4 +6,5 @@ html > body {
   font-family: 'Noto Sans KR', sans-serif;
   box-sizing: border-box;
   word-break: keep-all;
+  background-color: #f7f6f2;
 }

@@ -9,10 +9,12 @@ interface IProps {
 const TopImage = ({ src, alt, innerText }: IProps) => {
   return (
     <>
-      <div className='h-44 md:h-36 lg:h-96 w-full relative'>
-        <Image src={src} alt={alt} layout='fill' objectFit='cover' />
-        <div className='text-white absolute bottom-10 font-medium text-lg lg:text-2xl w-full text-left max-w-6xl left-1/2 -translate-x-1/2'>
-          <span className='ml-28'>{innerText}</span>
+      <div className='w-full mt-20 lg:flex justify-between mx-auto items-end'>
+        <div className='h-24 text-4xl text-slate-600 flex items-end underline underline-offset-2 pl-10 lg:ml-[10vw] lg:text-5xl w-full max-w-xl'>
+          <span className='align-bottom'>{innerText}</span>
+        </div>
+        <div className='pl-4 w-full relative h-96 xl:h-[600px] lg:max-w-6xl'>
+          <Image src={src} alt={alt} objectFit='cover' layout='fill' />
         </div>
       </div>
     </>

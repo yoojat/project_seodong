@@ -1,4 +1,5 @@
 import ContentContainer from '@components/Project/ContentContainer';
+import { SmallTitle } from '@components/Project/SmallTitle';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
@@ -13,8 +14,8 @@ const Gogaeseodong: NextPage = () => {
         innerText={'The Project SEO DONG'}
       />
       <ContentContainer>
-        <h2 className='text-lg font-medium my-6'>고개서동_프로젝트</h2>
-        <h2 className='text-lg font-medium mt-6 mb-2'>1. 공간_고개서동</h2>
+        <SmallTitle>고개서동_프로젝트</SmallTitle>
+        <p className='mt-12 mb-1'>1. 공간_고개서동</p>
         <p>#쓸모없는 공간은 없다. </p>
         <p>#공간 업사이클링</p>
 
@@ -61,7 +62,7 @@ const Gogaeseodong: NextPage = () => {
             주요프로젝트 (사진 클릭시 해당 프로젝트로 이동)
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
-            <Link href='/'>
+            <Link href='/localspace/sharedkitchen'>
               <a>
                 <Image
                   src='/project/gogaeseodong/2.jpg'
@@ -73,11 +74,11 @@ const Gogaeseodong: NextPage = () => {
                 <div className='mt-2 mb-10'>공유주방</div>
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/localspace/partyroomandstudio'>
               <a>
                 <Image
                   src='/project/gogaeseodong/3.jpg'
-                  alt='공유주방'
+                  alt='파티룸'
                   width={300}
                   height={200}
                   objectFit='contain'
@@ -85,11 +86,11 @@ const Gogaeseodong: NextPage = () => {
                 <div className='mt-2 mb-10'>파티룸</div>
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/localspace/partyroomandstudio'>
               <a>
                 <Image
                   src='/project/gogaeseodong/4.jpg'
-                  alt='공유주방'
+                  alt='스튜디오'
                   width={300}
                   height={200}
                   objectFit='contain'
@@ -97,7 +98,7 @@ const Gogaeseodong: NextPage = () => {
                 <div className='mt-2 mb-10'>스튜디오</div>
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/locallife/class'>
               <a>
                 <Image
                   src='/project/gogaeseodong/5.jpg'

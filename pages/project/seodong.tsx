@@ -1,4 +1,5 @@
 import ContentContainer from '@components/Project/ContentContainer';
+import { SmallTitle } from '@components/Project/SmallTitle';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 
@@ -22,9 +23,7 @@ const Seodong: NextPage = () => {
           고개까지 올라오면 부산의 경치가 제법 보이는 아름다운 곳입니다.
         </p>
 
-        <h2 className='text-lg font-medium my-6'>
-          서동고개는 사연이 많은 동네입니다.
-        </h2>
+        <SmallTitle className=''>서동고개는 사연이 많은 동네입니다.</SmallTitle>
 
         <p className='my-1'>
           1968년에 영주동과 충무동 판자촌에서 온 철거민들이 이주하여 조성이 된
@@ -57,9 +56,9 @@ const Seodong: NextPage = () => {
         <p className='my-1'>
           왠지 모르게, 이 동네에 있으면 남아있는 분들의 마음을 알 것 같습니다.
         </p>
-        <h2 className='text-lg font-medium my-6'>
+        <SmallTitle className='text-xl font-medium my-6 underline underline-offset-4'>
           서동고개는 도시에서 볼 수 없는 추억이 있습니다.
-        </h2>
+        </SmallTitle>
         <p className='my-1'>
           서동고개에는 1960~1970년에 지어진 수많은 가옥들이 그대로 오밀조밀하게
           남겨져 있습니다.

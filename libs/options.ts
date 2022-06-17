@@ -3,13 +3,15 @@ export const title = 'The Project SEODONG';
 export const menus: {
   title: string;
   path: string;
+  number: string;
   subtitles: {
     title: string;
     path: string;
   }[];
 }[] = [
   {
-    title: '01. Project',
+    number: '01',
+    title: 'Project',
     path: '/about',
     subtitles: [
       {
@@ -31,7 +33,8 @@ export const menus: {
     ],
   },
   {
-    title: '02. Local Space',
+    number: '02',
+    title: 'Local Space',
     path: '/localspace',
     subtitles: [
       {
@@ -45,7 +48,8 @@ export const menus: {
     ],
   },
   {
-    title: '03. Local Life',
+    number: '03',
+    title: 'Local Life',
     path: '/locallife',
     subtitles: [
       {
@@ -64,7 +68,8 @@ export const menus: {
     ],
   },
   {
-    title: '04. Local Place',
+    number: '04',
+    title: 'Local Place',
     path: '/localplace',
     subtitles: [
       {
@@ -74,7 +79,8 @@ export const menus: {
     ],
   },
   {
-    title: '05. Local Goods',
+    number: '05',
+    title: 'Local Goods',
     path: '',
     subtitles: [
       {
