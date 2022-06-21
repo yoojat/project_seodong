@@ -8,40 +8,33 @@ const Partyroomandstudio: NextPage = () => {
     <>
       <ContentContainer>
         <h2 className='text-lg font-medium my-6'>
-          고개서동_ 파티룸 & 스튜디오
+          그리고, 서동 프로젝트의 두번째 공간,
         </h2>
         <p className='my-1'>
-          꼭 시끄럽고 복잡하고 사람 가득한 시내에 파티룸만 가야 하나요?
+          오티티 프라이빗 영화관 &apos;서동영화&apos;를 완성하였습니다.
         </p>
         <p className='my-1'>
-          왜 꼭 대기가 너무 많아 두 달 전 부터 예약을 해둬야할까요?
+          젊은계층의 이용자들이 프라이빗하게 플레이 할 수 있는 공간이 부족하다는
+          생각에 이 공간을 기획하게 되었습니다.
         </p>
         <p className='my-1'>
-          이곳은 여유와 낭만이 있는 골목에 위치한 고개서동 파티룸입니다.
+          현재 넷플릭스 영화나 스포츠 중계를 보기위해 이용하는 방문자들이
+          늘어나고 있습니다.
         </p>
         <div className='h-3' />
+        <p className='my-1'>뿐만 아니라,</p>
         <p className='my-1'>
-          고개서동 파티룸은 파티룸, 셀프 스튜디오, 빈티지 거실로 이루어져
-          있습니다.
+          지역 상인분들과 함께, 로컬 브랜드를 만드는 일에도 힘을 쏟고 있는데요.
         </p>
         <p className='my-1'>
-          모든 공간을 한 번에 한 팀만 이용 가능한 프라이빗 파티룸 입니다.
-        </p>
-
-        <div className='h-3' />
-        <p className='my-1'>
-          파티도 즐기고 친구, 연인과 함께 셀프 사진촬영까지 이용 가능합니다.
+          &apos;진짜한우육회&apos;라는 요식업 브랜드를 런칭하여,
         </p>
         <div className='h-3' />
+        <p className='my-1'>아직은 많이 부족하지만,</p>
         <p className='my-1'>
-          맛있는 음식도 먹고, 와인한잔 하면서 즐거운 파티를 보내세요.
+          지역사회에 조금이나마 보탬이 되기위해 노력하겠습니다.
         </p>
-        <div className='h-3' />
-
-        <p className='my-1'>
-          이곳은 여러분을 위해 만들어진, 공간입니다. 사랑하는 이들과 함께 서로를
-          축하하며, 추억을 남기세요.
-        </p>
+        <p className='my-1'>많은 분들의 관심과 동참 부탁드립니다.</p>
 
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>

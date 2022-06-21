@@ -19,15 +19,15 @@ export const menus: {
         path: '/about',
       },
       {
-        title: '서동고개',
+        title: '가깝지만 먼 동네',
         path: '/project/seodong',
       },
       {
-        title: '고개서동 프로젝트',
+        title: '서동 프로젝트',
         path: '/project/gogaeseodong',
       },
       {
-        title: '만든이들',
+        title: '만든이',
         path: '/project/operators',
       },
     ],
@@ -38,11 +38,11 @@ export const menus: {
     path: '/localspace',
     subtitles: [
       {
-        title: '공유주방',
+        title: '서동 부엌',
         path: '/localspace/sharedkitchen',
       },
       {
-        title: '파티룸&스튜디오',
+        title: '서동 영화',
         path: '/localspace/partyroomandstudio',
       },
     ],

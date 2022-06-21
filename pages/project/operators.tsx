@@ -1,8 +1,8 @@
 import ContentContainer from '@components/Project/ContentContainer';
+import { SmallTitle } from '@components/Project/SmallTitle';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const Operators: NextPage = () => {
   return (
@@ -10,61 +10,65 @@ const Operators: NextPage = () => {
       <TopImage
         src={'/project/operators/1.jpg'}
         alt={'만든이들'}
-        innerText={'만든이들'}
+        innerText={'만든이'}
       />
       <ContentContainer>
+        <SmallTitle>세상에 쓸모없는 공간은 없다.</SmallTitle>
+        <p className='my-1'>&quot;세상에 쓸모없는 공간은 없다.&quot;</p>
         <p className='my-1'>
-          어린시절 아름다웠던 추억이 많은 서동. 저희 모두는 이 지역 출신입니다.
+          안녕하십니까. 도시의 유휴공간을 활용하여, 새로운 가치를 창출해 나가는
+          &quot;(주)크리플레이&quot;입니다.
         </p>
+        <div className='h-3' />
+
+        <p className='my-1'>가치있는 공간과 지속가능성을 함께 고려하며,</p>
         <p className='my-1'>
-          많은 사람들이 떠나 동네 곳곳이 낙후되었으며, 더 이상 예전 활기찼던
-          분위기는 보기 힘들어 졌습니다.
-        </p>
-        <p className='my-1'>
-          그런 안타까움과 함께 도시재생에 대한 관심은 시작되었고,
-        </p>
-        <p className='my-1'>
-          각자의 추억을 되살리기 위해 늦기 전 행동 하기로 했습니다.
+          도시의 버려지거나 오래되어 낡은 것들을 재해석하는 것에 귀기울여
+          왔습니다.
         </p>
 
         <div className='h-3' />
 
         <p className='my-1'>
-          경험들이 쌓이면서 꿈만 꾸던 어린 시절보다 할 수 있는 것들이 많아졌고,
+          지난 5년간, 버려지거나 쓰임없는 공간들을 활용하여,
         </p>
-        <p className='my-1'>
-          인테리어 시공, 홈페이지 제작, 메뉴얼 제작, 기획, 커뮤니티 형성 등
-        </p>
+        <p className='my-1'>사람들이 찾아오는 공간을 만들어 왔습니다.</p>
 
         <p className='my-1'>
-          각자가 할 수 있는 가치 있는 능력을 활용해보기로 했습니다.
+          장소와 위치에 맞는 공간을 기획, 인테리어 시공 및 브랜딩,
+        </p>
+        <p className='my-1'>자체 온라인 시스템 도입, 마케팅 등을 통해,</p>
+        <p className='my-1'>20여개 이상의 공간을 직접 운영해 나갔으며,</p>
+        <p className='my-1'>
+          다양한 공간 컨설팅을 함께 병행해 나가고 있습니다.
+        </p>
+        <p className='my-1'>유휴공간을 활용하는 것은,</p>
+        <p className='my-1'>
+          상권좋은 공간을 기획, 운영하는 것보다 훨씬 힘든 일입니다.
+        </p>
+        <p className='my-1'>하지만, 이러한 장소를 잘 활용한다면,</p>
+        <p className='my-1'>
+          적은 투자에도 불구하고 지속가능한 구조를 만들수 있습니다.
         </p>
 
         <div className='h-3' />
 
         <p className='my-1'>
-          다른 지역의 성공적 사례를 적용하기 위해 배우고 노력한 결과
+          또한, 대부분의 사람들이 공간을 만들기만 하면, 끝이라는 생각을
+          가집니다.
         </p>
         <p className='my-1'>
-          고개 서동을 기획하고 만들 수 있게 되었고, 한걸음씩 나아가는 중입니다.
+          다양한 경험을 통해, 운영노하우와 자체 온라인 시스템을 도입하여,
+        </p>
+        <p className='my-1'>
+          최소인력으로 최대효과를 낼수있는 관리체계를 만들어 운영해 왔습니다.
         </p>
 
         <div className='h-3' />
         <p className='my-1'>
-          그렇게 시작된 저희는 쓸모 없어진 공간에 생기를 넣어,
+          유휴공간 활용에 관한 의뢰와 상담문의가 있으시면 언제든지 연락주시기
+          바랍니다.
         </p>
-        <p className='my-1'>
-          떠나간 사람들이 다시 찾아오는 공간을 만들고 있습니다
-        </p>
-        <p className='my-1'>
-          이제 우리는 잊혀진 공간에 다시 사람들이 찾아올 수 있게, 활기를
-          되찾아보려 합니다.
-        </p>
-        <p className='my-1'>
-          댓글, 홍보, 등 작은 한마디가 고개서동_프로젝트에 많은 도움이 됩니다.
-        </p>
-        <p className='my-1'>많은 관심과 격려 부탁드립니다.</p>
-        <p className='my-1'>감사합니다.</p>
 
         <div className='mt-5 w-full border-b-2' />
 

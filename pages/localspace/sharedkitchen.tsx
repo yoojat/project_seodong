@@ -8,19 +8,19 @@ const SharedKitchen: NextPage = () => {
     <>
       <ContentContainer>
         <h2 className='text-lg font-medium my-6'>고개서동_공유주방</h2>
-        <p className='my-1'>이 공간은 </p>
+        <p className='my-1'>첫 시작은,</p>
         <p className='my-1'>
-          공유주방, 모임공간, 베이킹공간, 회의공간으로도 손색이없는 곳입니다.
+          &apos;고개서동&apos; 건물을 활용하여, 공유주방 서동부엌을
+          오픈하였습니다.
         </p>
-        <p className='my-1'>사랑하는 사람을 초대해 함께 요리를 해먹거나,</p>
+        <p className='my-1'>시간과 자금이 부족했던 터라,</p>
+        <p className='my-1'>여유가 생길때마다 하나씩 만들어 나갔는데요..</p>
+        <div className='h-3' />
+        <p className='my-1'>그렇게 수개월의 시간이 흘렀고,</p>
         <p className='my-1'>
-          베이킹 도구를 이용해 아이들과 함께 제빵을 하면서 즐거운 시간을 보내도
-          됩니다.
+          주간 문의 건수 130회, 주간 평균 20여명 이상(6월 기준)
         </p>
-        <p className='my-1'>
-          제빵, 요리 원 데이 클래스를 진행하는데 공간이 없는 분들이 이용하기에는
-          더없이 딱 알맞은 곳입니다.
-        </p>
+
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
             <Image

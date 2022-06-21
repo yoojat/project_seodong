@@ -5,7 +5,6 @@ import tw from 'tailwind-styled-components';
 const MenuItemWrapper = tw.li`
   select-none
   border-b-[0.5px]
-  hover:text-yellow-900
 `;
 const MenuItem = tw.div`
   flex
