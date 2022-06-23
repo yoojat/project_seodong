@@ -42,9 +42,10 @@ export const menus: {
         path: '/localspace/sharedkitchen',
       },
       {
-        title: '서동 영화',
+        title: '서동 시네마',
         path: '/localspace/partyroomandstudio',
       },
+      { title: '작은 사진관', path: '#' },
     ],
   },
   {
@@ -81,13 +82,8 @@ export const menus: {
   {
     number: '05',
     title: 'Local Goods',
-    path: '',
-    subtitles: [
-      {
-        title: '준비중',
-        path: '',
-      },
-    ],
+    path: '#',
+    subtitles: [],
   },
 ];
 export const mainBgImgs = ['/bg/bg1.png', '/bg/bg2.png'];

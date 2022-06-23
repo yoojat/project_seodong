@@ -66,7 +66,7 @@ const MenuItemComponent = ({ title, subtitles, path, number }: IProps) => {
           <Link href={path}>
             <a>
               <MenuTitle>
-                <span className='underline underline-offset-2 scale-75 inline-block text-sm align-text-top mr-4'>
+                <span className='scale-75 inline-block text-sm align-text-top mr-4'>
                   {number}
                 </span>
                 <span className='text-md'>{title}</span>

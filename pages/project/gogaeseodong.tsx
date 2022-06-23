@@ -33,55 +33,55 @@ const Gogaeseodong: NextPage = () => {
         <div className='mt-5 w-full border-b-2' />
         <div className='mt-5 text-center text-lg'>
           <h3 className='mb-8'>
-            주요프로젝트 (사진 클릭시 해당 프로젝트로 이동)
+            주요 프로젝트 (사진 클릭시 해당 프로젝트로 이동)
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
             <Link href='/localspace/sharedkitchen'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/2.jpg'
-                  alt='공유주방'
+                  src='/project/gogaeseodong/6.jpeg'
+                  alt='서동 부엌'
                   width={300}
                   height={200}
                   objectFit='contain'
                 />
-                <div className='mt-2 mb-10'>공유주방</div>
+                <div className='mt-2 mb-10'>서동 부엌</div>
               </a>
             </Link>
             <Link href='/localspace/partyroomandstudio'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/3.jpg'
+                  src='/project/gogaeseodong/9.jpeg'
                   alt='파티룸'
                   width={300}
                   height={200}
                   objectFit='contain'
                 />
-                <div className='mt-2 mb-10'>파티룸</div>
+                <div className='mt-2 mb-10'>소셜 키친</div>
               </a>
             </Link>
             <Link href='/localspace/partyroomandstudio'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/4.jpg'
+                  src='/project/gogaeseodong/8.jpeg'
                   alt='스튜디오'
                   width={300}
                   height={200}
                   objectFit='contain'
                 />
-                <div className='mt-2 mb-10'>스튜디오</div>
+                <div className='mt-2 mb-10'>작은 사진관</div>
               </a>
             </Link>
             <Link href='/locallife/class'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/5.jpg'
+                  src='/project/gogaeseodong/7.jpeg'
                   alt='공유주방'
                   width={300}
                   height={200}
                   objectFit='contain'
                 />
-                <div className='mt-2 mb-10'>소셜다이닝, 클래스</div>
+                <div className='mt-2 mb-10'>서동 시네마</div>
               </a>
             </Link>
           </div>

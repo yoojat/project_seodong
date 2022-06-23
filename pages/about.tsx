@@ -53,8 +53,6 @@ const Home: NextPage = () => {
           <p className='my-4'>
             오늘도 하루를 시작하며, 외롭지 않았던 서동을 추억해 봅니다.
           </p>
-
-          <p className='my-10 text-center'>-송병근-</p>
         </CotentBackContainer>
       </ContentContainer>
     </>

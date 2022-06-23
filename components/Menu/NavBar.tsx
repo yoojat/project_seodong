@@ -31,7 +31,7 @@ const TopBarItem = tw.div`
   font-bold
   text-lg
   md:text-sm
-  lg:text-lg
+  lg:text-xl
   lg:font-normal
   cursor-pointer
 `;
@@ -127,7 +127,7 @@ export default function NavBar() {
         <TopBarContainer>
           <Link href='/'>
             <a>
-              <TopBarItem>가깝지만 먼 동네</TopBarItem>
+              <TopBarItem>가깝지만 먼 동네, 서동</TopBarItem>
             </a>
           </Link>
           <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>

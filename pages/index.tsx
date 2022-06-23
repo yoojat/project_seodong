@@ -3,11 +3,11 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import Link from 'next/link';
 
 const images = [
-  { url: 'img/main/1.png' },
-  { url: 'img/main/2.png' },
-  { url: 'img/main/3.png' },
-  { url: 'img/main/4.png' },
-  { url: 'img/main/5.png' },
+  { url: 'img/main/0.jpeg' },
+  { url: 'img/main/1.JPG' },
+  { url: 'img/main/2.JPG' },
+  { url: 'img/main/4.jpeg' },
+  { url: 'img/main/5.jpeg' },
 ];
 
 const Home: NextPage = () => {
@@ -24,9 +24,6 @@ const Home: NextPage = () => {
         />
       </div>
       <div className='text-center w-full mb-80 '>
-        <h1 className='lg:text-5xl text-3xl font-extralight select-none lg:mt-0 lg:font-light'>
-          The New Seodong
-        </h1>
         <h2 className='hidden lg:block mt-4'>서동 프로젝트</h2>
         <Link href='/about'>
           <a>
