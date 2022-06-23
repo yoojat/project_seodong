@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     <>
       <div></div>
       <TopImage
-        src={'/about/1.jpg'}
+        src={'/project/gogaeseodong/1.jpg'}
         alt={'서동 이미지'}
         innerText={'시작하며'}
       />

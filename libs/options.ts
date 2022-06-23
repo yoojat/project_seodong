@@ -11,7 +11,7 @@ export const menus: {
 }[] = [
   {
     number: '01',
-    title: 'Project',
+    title: '소개',
     path: '/about',
     subtitles: [
       {
@@ -34,7 +34,7 @@ export const menus: {
   },
   {
     number: '02',
-    title: 'Local Space',
+    title: '로컬 공간',
     path: '/localspace',
     subtitles: [
       {
@@ -50,7 +50,7 @@ export const menus: {
   },
   {
     number: '03',
-    title: 'Local Life',
+    title: '로컬 생활',
     path: '/locallife',
     subtitles: [
       {
@@ -70,7 +70,7 @@ export const menus: {
   },
   {
     number: '04',
-    title: 'Local Place',
+    title: '로컬 장소',
     path: '/localplace',
     subtitles: [
       {
@@ -81,7 +81,7 @@ export const menus: {
   },
   {
     number: '05',
-    title: 'Local Goods',
+    title: '로컬 활용',
     path: '#',
     subtitles: [],
   },
