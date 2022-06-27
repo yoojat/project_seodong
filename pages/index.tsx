@@ -6,6 +6,8 @@ const images = [
   { url: 'img/main/2.JPG' },
   { url: 'img/main/4.jpeg' },
   { url: 'img/main/5.jpeg' },
+  { url: 'img/main/6.jpeg' },
+  { url: 'img/main/7.jpeg' },
 ];
 
 const Home: NextPage = () => {
