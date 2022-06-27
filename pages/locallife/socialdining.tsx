@@ -41,12 +41,12 @@ const SocialDining: NextPage = () => {
 
         <div className='flex flex-wrap space-x-3 space-y-4 mt-20 justify-between'>
           <div>
-            <p className='my-1'>[운영 방식]</p>
-            <p className='my-1'>참가비 : 20,000원 (1인)</p>
-            <p className='my-1'>운영시간 : 18시30분 ~ 21시 30분</p>
+            <p className='my-4'>[운영 방식]</p>
+            <p className='my-4'>참가비 : 20,000원 (1인)</p>
+            <p className='my-4'>운영시간 : 18시30분 ~ 21시 30분</p>
             <div className='h-3' />
             <div className='h-3' />
-            <p className='my-1'>[참가하기] 포스터 참고</p>
+            <p className='my-4'>[참가하기] 포스터 참고</p>
           </div>
           <div>
             <Image

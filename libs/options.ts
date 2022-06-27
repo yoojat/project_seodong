@@ -42,7 +42,7 @@ export const menus: {
         path: '/localspace/sharedkitchen',
       },
       {
-        title: '서동 시네마',
+        title: '서동 영화',
         path: '/localspace/partyroomandstudio',
       },
       { title: '작은 사진관', path: '#' },
