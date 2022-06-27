@@ -39,7 +39,7 @@ const Partyroomandstudio: NextPage = () => {
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
             <Image
-              src='/localspace/partyroomandstudio/1.jpg'
+              src='/localspace/partyroomandstudio/2.jpeg'
               alt='고개서동_공유주방'
               width={500}
               height={350}

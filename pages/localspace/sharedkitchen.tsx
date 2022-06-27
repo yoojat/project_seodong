@@ -24,7 +24,7 @@ const SharedKitchen: NextPage = () => {
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
             <Image
-              src='/localspace/sharedkitchen/1.png'
+              src='/localspace/sharedkitchen/1.jpeg'
               alt='고개서동_공유주방'
               width={500}
               height={350}

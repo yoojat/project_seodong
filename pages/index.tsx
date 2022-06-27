@@ -3,11 +3,11 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import Link from 'next/link';
 
 const images = [
-  { url: 'img/main/2.JPG' },
-  { url: 'img/main/4.jpeg' },
-  { url: 'img/main/5.jpeg' },
-  { url: 'img/main/6.jpeg' },
   { url: 'img/main/7.jpeg' },
+  { url: 'img/main/2.JPG' },
+  { url: 'img/main/5.jpeg' },
+  { url: 'img/main/8.jpeg' },
+  { url: 'img/main/9.jpeg' },
 ];
 
 const Home: NextPage = () => {
