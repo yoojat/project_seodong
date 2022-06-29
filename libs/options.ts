@@ -35,7 +35,7 @@ export const menus: {
   {
     number: '02',
     title: '로컬 공간',
-    path: '/localspace',
+    path: '/localspace/sharedkitchen',
     subtitles: [
       {
         title: '서동 부엌',
@@ -45,25 +45,27 @@ export const menus: {
         title: '서동 영화',
         path: '/localspace/partyroomandstudio',
       },
-      { title: '작은 사진관', path: '#' },
+      { title: '작은 사진관', path: '/localspace/ministudio' },
+      { title: '진짜 독서실', path: '/localspace/realreadingroom' },
+      { title: '작은 서재', path: '/localspace/minilibrary' },
     ],
   },
   {
     number: '03',
-    title: '로컬 생활',
+    title: '로컬 컨텐츠',
     path: '/locallife',
     subtitles: [
       {
-        title: '고개서동 이야기',
+        title: '콘텐츠 스토리',
         path: '/locallife',
       },
       {
-        title: '소셜다이닝',
+        title: '서동 다이닝',
         path: '/locallife/socialdining',
       },
 
       {
-        title: '클래스',
+        title: '모닝 쿠킹',
         path: '/locallife/class',
       },
     ],
@@ -78,12 +80,6 @@ export const menus: {
         path: '/localplace',
       },
     ],
-  },
-  {
-    number: '05',
-    title: '로컬 활용',
-    path: '#',
-    subtitles: [],
   },
 ];
 export const mainBgImgs = ['/bg/bg1.png', '/bg/bg2.png'];

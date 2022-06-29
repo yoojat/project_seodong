@@ -1,36 +1,53 @@
 import ContentContainer from '@components/Project/ContentContainer';
-import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
-import Image from 'next/image';
+import SimpleImageSlider from 'react-simple-image-slider';
+
+const images = [
+  { url: '/localspace/sharedkitchen/slideImgs/8.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/2.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/3.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/5.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/6.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/7.jpeg' },
+  { url: '/localspace/sharedkitchen/slideImgs/1.jpeg' },
+];
 
 const SharedKitchen: NextPage = () => {
   return (
     <>
       <ContentContainer>
-        <h2 className='text-lg font-medium my-6'>고개서동_공유주방</h2>
-        <p className='my-4'>첫 시작은,</p>
+        <h2 className='text-lg font-medium my-6'>공유주방_서동부엌</h2>
         <p className='my-4'>
-          &apos;고개서동&apos; 건물을 활용하여, 공유주방 서동부엌을
-          오픈하였습니다.
+          공유주방 서동부엌은 서동 프로젝트의 첫번째 미션이었습니다.
         </p>
         <p className='my-4'>시간과 자금이 부족했던 터라,</p>
         <p className='my-4'>여유가 생길때마다 하나씩 만들어 나갔는데요..</p>
         <div className='h-3' />
-        <p className='my-4'>그렇게 수개월의 시간이 흘렀고,</p>
+        <p className='my-4'>수개월의 시간이 흘렀고,</p>
         <p className='my-4'>
           주간 문의 건수 130회, 주간 평균 20여명 이상(6월 기준)
         </p>
-
+        <p className='my-4'>이용하는 공유주방으로 활성화 되어지고 있습니다.</p>
+        <div className='h-3' />
+        <p className='my-4'>사랑하는 사람들과 한끼 식사를 해먹으며,</p>
+        <p className='my-4'>즐거운 시간을 보내기 좋은 공간입니다.</p>
+        <div className='h-3' />
+        <p className='my-4'>
+          또한, 제과 제빵, 원데이 클래스, 요리 동아리, 음식 스튜디오 공간 등으로
+          활용되어지고 있습니다.
+        </p>
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
-            <Image
-              src='/localspace/sharedkitchen/1.jpeg'
-              alt='고개서동_공유주방'
+            <SimpleImageSlider
               width={500}
               height={350}
-              objectFit={'cover'}
+              images={images}
+              showBullets={true}
+              showNavs={true}
+              autoPlay={true}
             />
-            <p className='my-4 mt-5'>[시설, 설비]</p>
+
+            <p className='my-4 mt-16'>[시설, 설비]</p>
             <p className='my-4'>-기본조리, 베이킹 도구 (예약 페이지 참고)</p>
             <p className='my-4'>-냉장고, 냉난방기, 블루투스 스피커</p>
             <p className='my-4'>-내부 화장실</p>
@@ -43,27 +60,12 @@ const SharedKitchen: NextPage = () => {
             <div className='h-3' />
             <p className='my-4'>[이용 안내]</p>
             <p className='my-4'>
-              •·이용 예약 확인 후, 문자로 비밀번호 등을 안내해 드립니다.
+              - 이용 예약 확인 후, 문자로 비밀번호 등을 안내해 드립니다.
             </p>
-            <p className='my-4'>•·매일 08:00 ~ 24:00(최소 3시간 이용 가능)</p>
             <p className='my-4'>
-              •·부산 금정구 서동로 91번길 7, 1층 - 인근 공영 주차장과 갓길
-              주차가 가능합니다.
+              - 주차 : &apos;서동 제2공영주차장&apos;에 주차 후, 도보 3분
+              거리(차량 1대 지원)
             </p>
-            <div className='h-3' />
-            <p className='my-4'>•·베이킹 도구를 사용하지 않을 경우</p>
-            <p className='my-4'>•평일(월~목) 1시간 - 12,000원(2인 기준)</p>
-            <p className='my-4'>
-              •주말(금~일), 공휴일 1시간 - 15,000원(2인 기준)
-            </p>
-            <p className='my-4'>• 인원 추가 시간 상관없이 1인 8,000원</p>
-            <div className='h-3' /> <div className='h-3' />
-            <p className='my-4'>•·베이킹 도구를 사용할 경우</p>
-            <p className='my-4'>•평일(월~목) 1시간 - 16,000원(2인 기준)</p>
-            <p className='my-4'>
-              •주말(금~일), 공휴일 1시간 - 19,000원(2인 기준)
-            </p>
-            <p className='my-4'>* 인원 추가 시간 상관없이 1인 12,000원</p>
           </div>
         </div>
         <div className='text-center mt-20'>
@@ -77,7 +79,7 @@ const SharedKitchen: NextPage = () => {
           </a>
           <a
             target='_blank'
-            href='https://m.booking.naver.com/booking/10/bizes/638724?theme=place&entry=pll&area=pll'
+            href='http://naver.me/FABzPF4p'
             rel='noreferrer'
             className='bg-green-600 text-white border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
           >

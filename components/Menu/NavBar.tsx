@@ -62,7 +62,7 @@ bg-white
   py-2
   transition-all
   duration-500
-  opacity-80
+  opacity-90
 `;
 
 const MenuItemContainer = tw.ul`
@@ -135,7 +135,9 @@ export default function NavBar() {
               {menus.map((menu, index) => (
                 <div key={index}>
                   <TopBarMenuItem>
-                    <span>{menu.title}</span>
+                    <Link href={menu.path}>
+                      <span>{menu.title}</span>
+                    </Link>
                     <div className='absolute top-12 group-hover:bg-yellow-900 text-white w-32 pl-3 py-2 invisible group-hover:visible transition-colors ease-in-out duration-300'>
                       <ul className='list-none'>
                         {menu.subtitles.map((subtitle, index) => (

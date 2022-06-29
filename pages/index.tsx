@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           height={'90vh'}
           images={images}
           showBullets={true}
-          showNavs={false}
+          showNavs={true}
           autoPlay={true}
         />
       </div>

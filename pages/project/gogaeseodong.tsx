@@ -9,7 +9,7 @@ const Gogaeseodong: NextPage = () => {
   return (
     <>
       <TopImage
-        src={'/project/gogaeseodong/1.jpg'}
+        src={'/project/gogaeseodong/12.png'}
         alt={'The Project SEO DONG'}
         innerText={'The Project SEO DONG'}
       />
@@ -51,7 +51,7 @@ const Gogaeseodong: NextPage = () => {
             <Link href='/locallife/class'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/7.jpeg'
+                  src='/project/gogaeseodong/13.jpeg'
                   alt='공유주방'
                   width={300}
                   height={200}
@@ -60,7 +60,7 @@ const Gogaeseodong: NextPage = () => {
                 <div className='mt-2 mb-10'>서동 영화</div>
               </a>
             </Link>
-            <Link href='/localspace/partyroomandstudio'>
+            <Link href='/localspace/ministudio'>
               <a>
                 <Image
                   src='/project/gogaeseodong/8.jpeg'

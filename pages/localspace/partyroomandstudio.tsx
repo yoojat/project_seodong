@@ -1,7 +1,16 @@
 import ContentContainer from '@components/Project/ContentContainer';
-import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
-import Image from 'next/image';
+import SimpleImageSlider from 'react-simple-image-slider';
+
+const images = [
+  { url: '/localspace/partyroomandstudio/slideImgs/4.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/2.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/9.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/8.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/7.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/5.jpeg' },
+  { url: '/localspace/partyroomandstudio/slideImgs/6.jpeg' },
+];
 
 const Partyroomandstudio: NextPage = () => {
   return (
@@ -13,44 +22,44 @@ const Partyroomandstudio: NextPage = () => {
         <p className='my-4'>
           오티티 프라이빗 영화관 &apos;서동영화&apos;를 완성하였습니다.
         </p>
+        <p className='my-4'>친구들과 어울려 놀 수 있는 공간이 참 없더라구요.</p>
         <p className='my-4'>
-          젊은계층의 이용자들이 프라이빗하게 플레이 할 수 있는 공간이 부족하다는
-          생각에 이 공간을 기획하게 되었습니다.
+          영화 한편을 보며, 맥주 한캔 마시는 여유를 즐기고 싶었습니다.
         </p>
         <p className='my-4'>
-          현재 넷플릭스 영화나 스포츠 중계를 보기위해 이용하는 방문자들이
-          늘어나고 있습니다.
-        </p>
-        <div className='h-3' />
-        <p className='my-4'>뿐만 아니라,</p>
-        <p className='my-4'>
-          지역 상인분들과 함께, 로컬 브랜드를 만드는 일에도 힘을 쏟고 있는데요.
-        </p>
-        <p className='my-4'>
-          &apos;진짜한우육회&apos;라는 요식업 브랜드를 런칭하여,
+          이런 작은 바램이 &apos;서동영화&apos;로 이어졌습니다.
         </p>
         <div className='h-3' />
-        <p className='my-4'>아직은 많이 부족하지만,</p>
+        <p className='my-4'>넷플릭스, 티빙과 같이 OTT 영화,</p>
+        <p className='my-4'>EPL, NBA와 같은 스포츠 중계,</p>
         <p className='my-4'>
-          지역사회에 조금이나마 보탬이 되기위해 노력하겠습니다.
+          닌텐도 스위치와 같은 게임을 하기에 최적의 장소입니다.
         </p>
-        <p className='my-4'>많은 분들의 관심과 동참 부탁드립니다.</p>
+        <div className='h-3' />
+
+        <p className='my-4'>
+          최근에는, 실내 데이트 장소로 많은 커플들이 찾아오고 있습니다.
+        </p>
 
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
-            <Image
-              src='/localspace/partyroomandstudio/2.jpeg'
-              alt='고개서동_공유주방'
+            <SimpleImageSlider
               width={500}
               height={350}
-              objectFit={'cover'}
+              images={images}
+              showBullets={true}
+              showNavs={true}
+              autoPlay={true}
             />
+
             <p className='my-1 mt-5'>[시설, 설비]</p>
-            <p className='my-4'>-기본조리, 베이킹 도구 (예약 페이지 참고)</p>
-            <p className='my-4'>-냉장고, 냉난방기, 블루투스 스피커</p>
-            <p className='my-4'>-각종파티용품, 빔프로젝터</p>
-            <p className='my-4'>-스튜디오 조명, 삼각대</p>
-            <p className='my-4'>-내부 화장실</p>
+            <p className='my-4'>
+              - 빔프로젝터, 스피커, 와인잔, 와인 거치대, 전자레인지, 커피포트,
+              블루투스 스피커, 스마트폰 충전기 등
+            </p>
+            <p className='my-4'>- 기본 접시, 그릇, 커트러리 등</p>
+            <p className='my-4'>- 각종파티용품, 빔프로젝터</p>
+            <p className='my-4'>- 내부 화장실</p>
           </div>
           <div>
             <p className='my-4'>[운영 안내]</p>
@@ -60,19 +69,13 @@ const Partyroomandstudio: NextPage = () => {
             <div className='h-3' />
             <p className='my-4'>[이용 안내]</p>
             <div className='h-3' />
-            <p className='my-4'>: 모든 요금은 1시간당 요금</p>
-            <p className='my-4'>: 최소3시간이상예약</p>
-            <p className='my-4'>: 4인기준금액</p>
-            <p className='my-4'>: 1인추가시10,000원</p>
-            <div className='h-3' />
-            <p className='my-4'>- 평일 (월~목)</p>
-            <p className='my-4'>20,000원 -&gt; 15,000원 (할인가)</p>
-            <div className='h-3' />
-            <p className='my-4'>- 주말 (금~일)</p>
-            <p className='my-4'>30,000원 -&gt; 25,000원 (할인가)</p>
-            <div className='h-3' /> <div className='h-3' />
-            <p className='my-4'>•·베이킹 도구를 사용할 경우</p>
-            <p className='my-4'>* 이벤트는 선착순 50명</p>
+            <p className='my-4'>
+              - 이용 예약 확인 후, 문자로 비밀번호 등을 안내해 드립니다.
+            </p>
+            <p className='my-4'>
+              - 주차 : &apos;서동 제2공영주차장&apos;에 주차 후, 도보 3분
+              거리(차량 1대 지원)
+            </p>
           </div>
         </div>
         <div className='text-center mt-20'>
@@ -86,7 +89,7 @@ const Partyroomandstudio: NextPage = () => {
           </a>
           <a
             target='_blank'
-            href='https://m.booking.naver.com/booking/10/bizes/638724?theme=place&entry=pll&area=pll'
+            href='http://naver.me/5K8JpQTp'
             rel='noreferrer'
             className='bg-green-600 text-white border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
           >
