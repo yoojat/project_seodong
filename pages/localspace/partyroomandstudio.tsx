@@ -43,25 +43,28 @@ const Partyroomandstudio: NextPage = () => {
 
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
-            <SimpleImageSlider
-              width={320}
-              height={240}
-              images={images}
-              showBullets={true}
-              showNavs={true}
-              autoPlay={true}
-            />
-
-            <p className='my-1 mt-5'>[시설, 설비]</p>
-            <p className='my-4'>
-              - 빔프로젝터, 스피커, 와인잔, 와인 거치대, 전자레인지, 커피포트,
-              블루투스 스피커, 스마트폰 충전기 등
-            </p>
-            <p className='my-4'>- 기본 접시, 그릇, 커트러리 등</p>
-            <p className='my-4'>- 각종파티용품, 빔프로젝터</p>
-            <p className='my-4'>- 내부 화장실</p>
+            <div className='relative w-full h-0 pb-[75%] overflow-hidden'>
+              <SimpleImageSlider
+                width='100%'
+                height='100%'
+                images={images}
+                showBullets={true}
+                showNavs={true}
+                autoPlay={true}
+              />
+            </div>
+            <div>
+              <p className='my-1 mt-5'>[시설, 설비]</p>
+              <p className='my-4'>
+                - 빔프로젝터, 스피커, 와인잔, 와인 거치대, 전자레인지, 커피포트,
+                블루투스 스피커, 스마트폰 충전기 등
+              </p>
+              <p className='my-4'>- 기본 접시, 그릇, 커트러리 등</p>
+              <p className='my-4'>- 각종파티용품, 빔프로젝터</p>
+              <p className='my-4'>- 내부 화장실</p>
+            </div>
           </div>
-          <div>
+          <div className='relative'>
             <p className='my-4'>[운영 안내]</p>
             <p className='my-4'>위치 : 부산 금정구 서동로 91번길 7. 2층</p>
             <p className='my-4'>운영시간 : 08시 ~ 24시 (연중무휴)</p>

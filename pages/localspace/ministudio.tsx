@@ -30,15 +30,17 @@ const SmallStudio: NextPage = () => {
           사랑하는 연인, 친구들과 함께 편안하고 자유롭게 추억을 남겨보세요.
         </p>
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
-          <div>
-            <SimpleImageSlider
-              width={315}
-              height={560}
-              images={images}
-              showBullets={true}
-              showNavs={true}
-              autoPlay={true}
-            />
+          <div className='max-w-sm'>
+            <div className='relative w-full h-0 pb-[177%] overflow-hidden'>
+              <SimpleImageSlider
+                width='100%'
+                height='100%'
+                images={images}
+                showBullets={true}
+                showNavs={true}
+                autoPlay={true}
+              />
+            </div>
 
             <p className='my-4 mt-16'>[시설, 설비]</p>
             <p className='my-4'>
@@ -70,7 +72,7 @@ const SmallStudio: NextPage = () => {
           </a>
           <a
             target='_blank'
-            href='http://naver.me/FABzPF4p'
+            href='http://naver.me/5K8JpQTp'
             rel='noreferrer'
             className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
           >

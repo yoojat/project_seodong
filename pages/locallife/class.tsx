@@ -46,11 +46,11 @@ const Class: NextPage = () => {
               배워나가시는 것을 추천 드려요.
             </p>
           </div>
-          <div>
-            <div>
+          <div className='lg:flex-1 w-full max-w-md mx-auto'>
+            <div className='relative w-full h-0 pb-[125%] overflow-hidden'>
               <SimpleImageSlider
-                width={320}
-                height={400}
+                width={'100%'}
+                height={'100%'}
                 images={images}
                 showBullets={true}
                 showNavs={false}

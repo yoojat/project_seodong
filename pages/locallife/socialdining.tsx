@@ -15,7 +15,7 @@ const SocialDining: NextPage = () => {
     <>
       <ContentContainer>
         <div className='flex flex-wrap justify-between'>
-          <div>
+          <div className='lg:flex-1'>
             <h2 className='text-lg font-medium my-6'>
               서동부엌에서의 한끼 식사 _행복한 저녁 프로젝트 (소셜다이닝)
             </h2>
@@ -49,29 +49,31 @@ const SocialDining: NextPage = () => {
               </p>
               <div className='h-3' />
               <div className='h-3' />
-              <div className='text-center mt-20'>
-                <a
-                  target='_blank'
-                  href='https://pf.kakao.com/_VCxnsb/chat'
-                  rel='noreferrer'
-                  className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
-                >
-                  문의
-                </a>
-              </div>
             </div>
           </div>
-          <div>
-            <div>
+          <div className='lg:flex-1 w-full max-w-xl mx-auto'>
+            <div className='relative w-full h-0 pb-[100%] overflow-hidden'>
               <SimpleImageSlider
-                width={300}
-                height={400}
+                width={'100%'}
+                height={'100%'}
                 images={images}
                 showBullets={true}
                 showNavs={false}
                 autoPlay={true}
               />
             </div>
+          </div>
+        </div>
+        <div>
+          <div className='text-center mt-20'>
+            <a
+              target='_blank'
+              href='https://pf.kakao.com/_VCxnsb/chat'
+              rel='noreferrer'
+              className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
+            >
+              문의
+            </a>
           </div>
         </div>
 

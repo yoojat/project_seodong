@@ -37,20 +37,23 @@ const SharedKitchen: NextPage = () => {
           활용되어지고 있습니다.
         </p>
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
-          <div>
-            <SimpleImageSlider
-              width={350}
-              height={350}
-              images={images}
-              showBullets={true}
-              showNavs={true}
-              autoPlay={true}
-            />
-
-            <p className='my-4 mt-16'>[시설, 설비]</p>
-            <p className='my-4'>-기본조리, 베이킹 도구 (예약 페이지 참고)</p>
-            <p className='my-4'>-냉장고, 냉난방기, 블루투스 스피커</p>
-            <p className='my-4'>-내부 화장실</p>
+          <div className='lg:flex-1 w-full max-w-xl'>
+            <div className='relative w-full h-0 pb-[100%] overflow-hidden'>
+              <SimpleImageSlider
+                width='100%'
+                height='100%'
+                images={images}
+                showBullets={true}
+                showNavs={true}
+                autoPlay={true}
+              />
+            </div>
+            <div>
+              <p className='my-4 mt-16'>[시설, 설비]</p>
+              <p className='my-4'>-기본조리, 베이킹 도구 (예약 페이지 참고)</p>
+              <p className='my-4'>-냉장고, 냉난방기, 블루투스 스피커</p>
+              <p className='my-4'>-내부 화장실</p>
+            </div>
           </div>
           <div>
             <p className='my-4'>[운영 안내]</p>
