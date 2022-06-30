@@ -44,8 +44,8 @@ const Partyroomandstudio: NextPage = () => {
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
             <SimpleImageSlider
-              width={500}
-              height={350}
+              width={320}
+              height={240}
               images={images}
               showBullets={true}
               showNavs={true}
@@ -83,17 +83,17 @@ const Partyroomandstudio: NextPage = () => {
             target='_blank'
             href='https://pf.kakao.com/_VCxnsb/chat'
             rel='noreferrer'
-            className='bg-yellow-400 text-yellow-900 border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
+            className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
           >
-            카카오 문의
+            문의
           </a>
           <a
             target='_blank'
             href='http://naver.me/5K8JpQTp'
             rel='noreferrer'
-            className='bg-green-600 text-white border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
+            className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
           >
-            네이버 예약
+            예약
           </a>
         </div>
       </ContentContainer>

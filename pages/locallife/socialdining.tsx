@@ -54,9 +54,9 @@ const SocialDining: NextPage = () => {
                   target='_blank'
                   href='https://pf.kakao.com/_VCxnsb/chat'
                   rel='noreferrer'
-                  className='bg-yellow-400 text-yellow-900 border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
+                  className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'
                 >
-                  카카오
+                  문의
                 </a>
               </div>
             </div>
@@ -64,8 +64,8 @@ const SocialDining: NextPage = () => {
           <div>
             <div>
               <SimpleImageSlider
-                width={500}
-                height={650}
+                width={300}
+                height={400}
                 images={images}
                 showBullets={true}
                 showNavs={false}
@@ -87,9 +87,8 @@ const SocialDining: NextPage = () => {
                 target='_blank'
                 href='https://pf.kakao.com/_VCxnsb/chat'
                 rel='noreferrer'
-                className='bg-yellow-400 text-yellow-900 border-none font-extrabold cursor-pointer hover:opacity-80 m-3 w-40 inline-block p-3 text-center'
-              >
-                카카오
+            className='border-amber-900 border-[1px] text-yellow-900 font-extrabold cursor-pointer m-3 w-40 inline-block p-3 text-center hover:bg-amber-900 hover:text-white transition-all'              >
+                문의
               </a>
             </div>
           </div>

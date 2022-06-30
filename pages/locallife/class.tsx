@@ -49,8 +49,8 @@ const Class: NextPage = () => {
           <div>
             <div>
               <SimpleImageSlider
-                width={500}
-                height={650}
+                width={320}
+                height={400}
                 images={images}
                 showBullets={true}
                 showNavs={false}
