@@ -60,6 +60,11 @@ export const menus: {
         path: '/locallife',
       },
       {
+        title: '진짜한우육회',
+        path: '/locallife/yuksashimi',
+      },
+
+      {
         title: '서동 다이닝',
         path: '/locallife/socialdining',
       },
