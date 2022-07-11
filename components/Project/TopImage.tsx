@@ -14,7 +14,13 @@ const TopImage = ({ src, alt, innerText }: IProps) => {
           <span className='align-bottom'>{innerText}</span>
         </div>
         <div className='pl-4 w-full relative h-96 xl:h-[600px] lg:max-w-6xl'>
-          <Image src={src} alt={alt} objectFit='cover' layout='fill' />
+          <Image
+            src={src}
+            alt={alt}
+            objectFit='cover'
+            layout='fill'
+            placeholder='blur'
+          />
         </div>
       </div>
     </>

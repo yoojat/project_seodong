@@ -42,6 +42,7 @@ const Localplace: NextPage = () => {
               width={450}
               height={400}
               objectFit={'cover'}
+              placeholder='blur'
             />
             <h2 className='text-lg font-medium my-6'>서동미로시장</h2>
             <p className='my-3'>서동의 오래된 전통시장입니다. </p>
@@ -65,6 +66,7 @@ const Localplace: NextPage = () => {
               width={450}
               height={400}
               objectFit={'cover'}
+              placeholder='blur'
             />
             <h2 className='text-lg font-medium my-6'>
               서동고개 스냅샷 찍기 좋은 곳

@@ -79,6 +79,7 @@ const Operators: NextPage = () => {
               width={300}
               height={200}
               objectFit='contain'
+              placeholder='blur'
             />
             <Image
               src='/project/operators/1.jpeg'
@@ -93,6 +94,7 @@ const Operators: NextPage = () => {
               width={300}
               height={200}
               objectFit='contain'
+              placeholder='blur'
             />
 
             <Image
@@ -101,6 +103,7 @@ const Operators: NextPage = () => {
               width={300}
               height={200}
               objectFit='contain'
+              placeholder='blur'
             />
           </div>
         </div>

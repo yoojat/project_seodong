@@ -53,6 +53,7 @@ const MiniLibrary: NextPage = () => {
               width={500}
               height={350}
               objectFit={'cover'}
+              placeholder='blur'
             />
             <p className='my-4'>[시설, 설비]</p>
             <p className='my-4'>

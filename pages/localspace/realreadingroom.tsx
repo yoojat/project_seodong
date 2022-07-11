@@ -50,6 +50,7 @@ const RealReadingRoom: NextPage = () => {
               width={500}
               height={350}
               objectFit={'cover'}
+              placeholder='blur'
             />
           </div>
         </div>

@@ -44,6 +44,7 @@ const Gogaeseodong: NextPage = () => {
                   width={300}
                   height={200}
                   objectFit='contain'
+                  placeholder='blur'
                 />
                 <div className='mt-2 mb-10'>서동 부엌</div>
               </a>
@@ -56,6 +57,7 @@ const Gogaeseodong: NextPage = () => {
                   width={300}
                   height={200}
                   objectFit='contain'
+                  placeholder='blur'
                 />
                 <div className='mt-2 mb-10'>서동 영화</div>
               </a>
@@ -68,6 +70,7 @@ const Gogaeseodong: NextPage = () => {
                   width={300}
                   height={200}
                   objectFit='contain'
+                  placeholder='blur'
                 />
                 <div className='mt-2 mb-10'>작은 사진관</div>
               </a>
@@ -80,6 +83,7 @@ const Gogaeseodong: NextPage = () => {
                   width={300}
                   height={200}
                   objectFit='contain'
+                  placeholder='blur'
                 />
                 <div className='mt-2 mb-10'>리테일 컨텐츠</div>
               </a>
