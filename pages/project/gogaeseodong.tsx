@@ -4,12 +4,17 @@ import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import TopSrcImage from '../../public/project/gogaeseodong/12.png';
+import KitchenImgSrc from '../../public/project/gogaeseodong/9.jpeg';
+import MovieImgSrc from '../../public/project/gogaeseodong/13.jpeg';
+import StudioImgSrc from '../../public/project/gogaeseodong/8.jpeg';
+import PartyRoomImgSrc from '../../public/project/gogaeseodong/11.jpeg';
 
 const Gogaeseodong: NextPage = () => {
   return (
     <>
       <TopImage
-        src={'/project/gogaeseodong/12.png'}
+        src={TopSrcImage}
         alt={'The Project SEO DONG'}
         innerText={'The Project SEO DONG'}
       />
@@ -39,7 +44,7 @@ const Gogaeseodong: NextPage = () => {
             <Link href='/localspace/sharedkitchen'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/9.jpeg'
+                  src={KitchenImgSrc}
                   alt='서동 부엌'
                   width={300}
                   height={200}
@@ -52,8 +57,8 @@ const Gogaeseodong: NextPage = () => {
             <Link href='/locallife/class'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/13.jpeg'
-                  alt='공유주방'
+                  src={MovieImgSrc}
+                  alt='서동영화'
                   width={300}
                   height={200}
                   objectFit='contain'
@@ -65,7 +70,7 @@ const Gogaeseodong: NextPage = () => {
             <Link href='/localspace/ministudio'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/8.jpeg'
+                  src={StudioImgSrc}
                   alt='스튜디오'
                   width={300}
                   height={200}
@@ -78,7 +83,7 @@ const Gogaeseodong: NextPage = () => {
             <Link href='/localspace/partyroomandstudio'>
               <a>
                 <Image
-                  src='/project/gogaeseodong/11.jpeg'
+                  src={PartyRoomImgSrc}
                   alt='파티룸'
                   width={300}
                   height={200}

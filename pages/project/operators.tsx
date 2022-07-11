@@ -3,15 +3,16 @@ import { SmallTitle } from '@components/Project/SmallTitle';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import TopImgSrc from '../../public/project/operators/temp.jpeg';
+import ImgSrc1 from '../../public/project/operators/3.jpeg';
+import ImgSrc2 from '../../public/project/operators/1.jpeg';
+import ImgSrc3 from '../../public/project/operators/2.jpeg';
+import ImgSrc4 from '../../public/project/operators/4.jpeg';
 
 const Operators: NextPage = () => {
   return (
     <>
-      <TopImage
-        src={'/project/operators/temp.jpeg'}
-        alt={'만든이들'}
-        innerText={'만든이'}
-      />
+      <TopImage src={TopImgSrc} alt={'만든이들'} innerText={'만든이'} />
       <ContentContainer>
         <SmallTitle>세상에 쓸모없는 공간은 없다.</SmallTitle>
         <p className='my-4'>
@@ -74,7 +75,7 @@ const Operators: NextPage = () => {
         <div className='mt-5 text-center text-lg'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2'>
             <Image
-              src='/project/operators/3.jpeg'
+              src={ImgSrc1}
               alt='공유주방'
               width={300}
               height={200}
@@ -82,14 +83,14 @@ const Operators: NextPage = () => {
               placeholder='blur'
             />
             <Image
-              src='/project/operators/1.jpeg'
+              src={ImgSrc2}
               alt='공유주방'
               width={300}
               height={200}
               objectFit='contain'
             />
             <Image
-              src='/project/operators/2.jpeg'
+              src={ImgSrc3}
               alt='공유주방'
               width={300}
               height={200}
@@ -98,7 +99,7 @@ const Operators: NextPage = () => {
             />
 
             <Image
-              src='/project/operators/4.jpeg'
+              src={ImgSrc4}
               alt='공유주방'
               width={300}
               height={200}

@@ -2,6 +2,7 @@ import ContentContainer from '@components/Project/ContentContainer';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import SimpleImageSlider from 'react-simple-image-slider';
+import ImgSrc from '../../public/localspace/realreadingroom/1.jpeg';
 
 const images = [
   { url: '/localspace/ministudio/slideImgs/1.jpeg' },
@@ -45,7 +46,7 @@ const RealReadingRoom: NextPage = () => {
           </div>
           <div>
             <Image
-              src='/localspace/realreadingroom/1.jpeg'
+              src={ImgSrc}
               alt='진짜 독서실'
               width={500}
               height={350}

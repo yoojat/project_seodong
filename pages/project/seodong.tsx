@@ -2,12 +2,13 @@ import ContentContainer from '@components/Project/ContentContainer';
 import { SmallTitle } from '@components/Project/SmallTitle';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
+import ImgSrc from '../../public/project/seodong/1.jpg';
 
 const Seodong: NextPage = () => {
   return (
     <>
       <TopImage
-        src={'/project/seodong/1.jpg'}
+        src={ImgSrc}
         alt={'가깝지만 먼 동네'}
         innerText={'가깝지만 먼 동네'}
       />

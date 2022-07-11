@@ -2,6 +2,7 @@ import ContentContainer from '@components/Project/ContentContainer';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import SimpleImageSlider from 'react-simple-image-slider';
+import ImgSrc from '../../public/localspace/minilibrary/1.jpeg';
 
 const images = [
   { url: '/localspace/ministudio/slideImgs/1.jpeg' },
@@ -48,7 +49,7 @@ const MiniLibrary: NextPage = () => {
         <div className='flex flex-wrap space-x-3 mt-20 justify-between'>
           <div>
             <Image
-              src='/localspace/minilibrary/1.jpeg'
+              src={ImgSrc}
               alt='진짜 독서실'
               width={500}
               height={350}

@@ -2,6 +2,8 @@ import ContentContainer from '@components/Project/ContentContainer';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import ImageSrc1 from '../public/localplace/1.jpg';
+import ImageSrc2 from '../public/localplace/2.jpg';
 
 const Localplace: NextPage = () => {
   return (
@@ -37,7 +39,7 @@ const Localplace: NextPage = () => {
         <div className='flex flex-wrap space-x-3 space-y-4 mt-20 justify-between'>
           <div>
             <Image
-              src='/localplace/1.JPG'
+              src={ImageSrc1}
               alt='고개서동_공유주방'
               width={450}
               height={400}
@@ -61,7 +63,7 @@ const Localplace: NextPage = () => {
           </div>
           <div>
             <Image
-              src='/localplace/2.jpg'
+              src={ImageSrc2}
               alt='고개서동_공유주방'
               width={450}
               height={400}

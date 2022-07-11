@@ -2,6 +2,7 @@ import ContentContainer from '@components/Project/ContentContainer';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import tw from 'tailwind-styled-components';
+import mainImage from '../public/project/gogaeseodong/1.jpg';
 
 const CotentBackContainer = tw.div`
   text-slate-700
@@ -13,11 +14,7 @@ const Home: NextPage = () => {
   return (
     <>
       <div></div>
-      <TopImage
-        src={'/project/gogaeseodong/1.jpg'}
-        alt={'서동 이미지'}
-        innerText={'시작하며'}
-      />
+      <TopImage src={mainImage} alt={'서동 이미지'} innerText={'시작하며'} />
       <ContentContainer>
         <CotentBackContainer>
           <p className='my-4'>

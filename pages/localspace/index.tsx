@@ -1,15 +1,12 @@
 import ContentContainer from '@components/Project/ContentContainer';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
+import ImgSrc from '../../public/localspace/1.jpg';
 
 const Localspace: NextPage = () => {
   return (
     <>
-      <TopImage
-        src={'/localspace/1.jpg'}
-        alt={'서동 고개 메인 이미지'}
-        innerText={''}
-      />
+      <TopImage src={ImgSrc} alt={'서동 고개 메인 이미지'} innerText={''} />
       <ContentContainer>
         <p className='my-4'>
           우리가 태어나고 자란 이 동네 서동고개가 다시금 활기를 되찾길 바랍니다.
