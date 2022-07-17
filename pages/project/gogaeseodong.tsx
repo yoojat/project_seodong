@@ -19,7 +19,7 @@ const Gogaeseodong: NextPage = () => {
         innerText={'The Project SEO DONG'}
       />
       <ContentContainer>
-        <SmallTitle>고개서동_프로젝트</SmallTitle>
+        <SmallTitle>고개서동</SmallTitle>
         <p>#쓸모없는 공간은 없다. #로컬 업사이클링</p>
         <p>#지속가능한 #로컬자원 활용</p>
         <div className='h-3' />
