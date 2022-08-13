@@ -127,7 +127,9 @@ export default function NavBar() {
         <TopBarContainer>
           <Link href='/'>
             <a>
-              <TopBarItem>가깝지만 먼 동네, 서동</TopBarItem>
+              <TopBarItem>
+                서동부엌, 서동영화, 서동문방 - 고개서동 프로젝트
+              </TopBarItem>
             </a>
           </Link>
           <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>

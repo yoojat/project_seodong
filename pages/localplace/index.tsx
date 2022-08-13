@@ -2,8 +2,8 @@ import ContentContainer from '@components/Project/ContentContainer';
 import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import ImageSrc1 from '../public/localplace/1.jpg';
-import ImageSrc2 from '../public/localplace/2.jpg';
+import ImageSrc1 from '../../public/localplace/1.jpg';
+import ImageSrc2 from '../../public/localplace/2.jpg';
 
 const Localplace: NextPage = () => {
   return (
@@ -38,14 +38,14 @@ const Localplace: NextPage = () => {
         </p>
         <div className='flex flex-wrap space-x-3 space-y-4 mt-20 justify-between'>
           <div>
-            <Image
+            {/* <Image
               src={ImageSrc1}
               alt='고개서동_공유주방'
               width={450}
               height={400}
               objectFit={'cover'}
               placeholder='blur'
-            />
+            /> */}
             <h2 className='text-lg font-medium my-6'>서동미로시장</h2>
             <p className='my-3'>서동의 오래된 전통시장입니다. </p>
             <p className='my-3'>서동고개 사람들이 생계를 유지하는데 </p>
