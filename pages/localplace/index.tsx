@@ -1,9 +1,8 @@
 import ContentContainer from '@components/Project/ContentContainer';
-import TopImage from '@components/Project/TopImage';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import ImageSrc1 from '../../public/localplace/1.jpg';
-import ImageSrc2 from '../../public/localplace/2.jpg';
+import ImageSrc1 from '../../public/localplace/localplace1.jpg';
+import ImageSrc2 from '../../public/localplace/localplace2.jpg';
 
 const Localplace: NextPage = () => {
   return (
