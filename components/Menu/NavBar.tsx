@@ -41,9 +41,9 @@ const MenuIcon = tw.div`
   lg:hidden
 `;
 
-const ContentConver = tw.div<{ isOpen: boolean }>`
-  ${(p: { isOpen: boolean }) =>
-    p.isOpen ? 'visible bg-opacity-60' : 'bg-opacity-0 invisible'}
+const ContentConver = tw.div<{ is_open: boolean }>`
+  ${(p: { is_open: boolean }) =>
+    p.is_open ? 'visible bg-opacity-60' : 'bg-opacity-0 invisible'}
   bg-zinc-900
   w-full
   h-screen
@@ -53,8 +53,8 @@ const ContentConver = tw.div<{ isOpen: boolean }>`
   ease-in-out
 `;
 
-const Menu = tw.div<{ isOpen: boolean }>`
-${(p: { isOpen: any }) => (p.isOpen ? '-right-0' : '-right-full')}
+const Menu = tw.div<{ is_open: boolean }>`
+${(p: { is_open: any }) => (p.is_open ? '-right-0' : '-right-full')}
 bg-white
   h-screen
   w-72
@@ -111,7 +111,7 @@ ${(p: { downMenuOpen: boolean }) => (p.downMenuOpen ? `max-h-96` : 'max-h-0')}
 `;
 
 export default function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [is_open, setIsOpen] = useState(false);
   const [downMenuOpen, setDownMenuOpen] = useState(false);
 
   //  메뉴 클릭하여 라우터 이동시 사이드 메뉴 닫아줌
@@ -127,9 +127,7 @@ export default function NavBar() {
         <TopBarContainer>
           <Link href='/'>
             <a>
-              <TopBarItem>
-                서동부엌, 서동영화, 서동문방 - 고개서동 프로젝트
-              </TopBarItem>
+              <TopBarItem>가깝지만 먼 동네, 서동</TopBarItem>
             </a>
           </Link>
           <TopBarMenu onMouseEnter={() => setDownMenuOpen(true)}>
@@ -204,9 +202,9 @@ export default function NavBar() {
           </div>
         </DownMenu> */}
       </TopBarWrapper>
-      <ContentConver isOpen={isOpen} onClick={() => setIsOpen(false)} />
+      <ContentConver is_open={is_open} onClick={() => setIsOpen(false)} />
 
-      <Menu isOpen={isOpen}>
+      <Menu is_open={is_open}>
         <CloseButton onClick={() => setIsOpen(false)}>
           <svg
             fill='white'

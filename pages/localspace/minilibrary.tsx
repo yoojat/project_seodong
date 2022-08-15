@@ -50,7 +50,7 @@ const MiniLibrary: NextPage = () => {
           <div>
             <Image
               src={ImgSrc}
-              alt='진짜 독서실'
+              alt='서동 문방'
               width={500}
               height={350}
               objectFit={'cover'}

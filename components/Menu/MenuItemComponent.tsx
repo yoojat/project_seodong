@@ -23,12 +23,12 @@ const MenuDropBtn = tw.div`
   justify-center
   cursor-pointer
 `;
-const SubMenuContainer = tw.ul<{ isOpen: boolean }>`
+const SubMenuContainer = tw.ul<{ is_open: boolean }>`
   mt-1
   transition-all
   duration-500
   overflow-hidden
-  ${(p: { isOpen: boolean }) => (p.isOpen ? `max-h-96` : 'max-h-0')}
+  ${(p: { is_open: boolean }) => (p.is_open ? `max-h-96` : 'max-h-0')}
 
 `;
 
@@ -100,7 +100,7 @@ const MenuItemComponent = ({ title, subtitles, path, number }: IProps) => {
           </MenuDropBtn>
         </div>
 
-        <SubMenuContainer isOpen={isShowSubtitles}>
+        <SubMenuContainer is_open={isShowSubtitles}>
           {subtitles?.map((subtitle, index) => (
             <Link key={index} href={subtitle.path}>
               <li className={'py-1'}>
