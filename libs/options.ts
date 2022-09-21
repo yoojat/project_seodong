@@ -46,8 +46,8 @@ export const menus: {
         path: '/localspace/partyroomandstudio',
       },
       { title: '작은 사진관', path: '/localspace/ministudio' },
-      { title: '서동 문방', path: '/localspace/realreadingroom' },
-      { title: '작은 서재', path: '/localspace/minilibrary' },
+      // { title: '서동 문방', path: '/localspace/realreadingroom' },
+      // { title: '작은 서재', path: '/localspace/minilibrary' },
     ],
   },
   {
