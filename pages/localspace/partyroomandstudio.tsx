@@ -3,13 +3,17 @@ import type { NextPage } from 'next';
 import SimpleImageSlider from 'react-simple-image-slider';
 
 const images = [
-  { url: '/localspace/partyroomandstudio/slideImgs/4.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/2.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/9.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/8.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/7.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/5.jpeg' },
-  { url: '/localspace/partyroomandstudio/slideImgs/6.jpeg' },
+  { url: '/localspace/movie/1.jpeg' },
+  { url: '/localspace/movie/2.jpeg' },
+  { url: '/localspace/movie/3.jpeg' },
+  { url: '/localspace/movie/4.jpeg' },
+  { url: '/localspace/movie/5.jpeg' },
+  { url: '/localspace/movie/6.jpeg' },
+  { url: '/localspace/movie/7.jpeg' },
+  { url: '/localspace/movie/8.jpeg' },
+  { url: '/localspace/movie/9.jpeg' },
+  { url: '/localspace/movie/10.jpeg' },
+  { url: '/localspace/movie/11.jpeg' },
 ];
 
 const Partyroomandstudio: NextPage = () => {
