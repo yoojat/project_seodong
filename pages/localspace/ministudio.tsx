@@ -3,16 +3,14 @@ import type { NextPage } from 'next';
 import SimpleImageSlider from 'react-simple-image-slider';
 
 const images = [
-  { url: '/localspace/ministudio/slideImgs/1.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/2.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/3.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/4.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/5.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/6.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/7.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/8.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/9.jpeg' },
-  { url: '/localspace/ministudio/slideImgs/10.jpeg' },
+  { url: '/localspace/ministudio/1.jpeg' },
+  { url: '/localspace/ministudio/2.jpeg' },
+  { url: '/localspace/ministudio/3.jpeg' },
+  { url: '/localspace/ministudio/4.jpeg' },
+  { url: '/localspace/ministudio/5.jpeg' },
+  { url: '/localspace/ministudio/6.jpeg' },
+  { url: '/localspace/ministudio/7.jpeg' },
+  { url: '/localspace/ministudio/8.jpeg' },
 ];
 
 const SmallStudio: NextPage = () => {
